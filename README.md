@@ -34,7 +34,7 @@ To get a local copy up and running follow these simple example steps.
 For this app to work you need PostgreSQL. To create the database use the psql shell: <br>
 `CREATE DATABASE skatepark;`
 
-And create a table using this command:
+And create a table using this command:<br>
 `CREATE TABLE skaters (id SERIAL, email VARCHAR(50) NOT NULL, nombre VARCHAR(25) NOT NULL, password VARCHAR(25) NOT NULL, anos_experiencia INT NOT NULL, especialidad VARCHAR(50) NOT NULL, foto VARCHAR(255) NOT NULL, estado BOOLEAN NOT NULL);`
 
 ### Install
