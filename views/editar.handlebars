@@ -1,0 +1,99 @@
+<h1>Skate Park</h1>
+
+<div class="py-4">
+    <h2>Datos del perfil</h2>
+    <hr class="my-4" />
+
+    <form>
+        <div class="form-group row w-50 m-auto">
+            <div class="form-group col-12 col-sm-6">
+                <label>Email</label>
+                <input class="form-control m-auto" disabled value="{{data.email}}" id="email" />
+            </div>
+            <div class="form-group col-12 col-sm-6">
+                <label>Nombre</label>
+                <input class="form-control m-auto" value="{{data.nombre}}" id="nombre" />
+            </div>
+            <div class="form-group col-12 col-sm-6">
+                <label>Password</label>
+                <input type="password" class="form-control m-auto" value="{{data.password}}" onchange="validaPass()"
+                    id="password" />
+            </div>
+            <div class="form-group col-12 col-sm-6">
+                <label>Repita la password</label>
+                <input type="password" class="form-control m-auto" value="{{data.password}}" onchange="validaPass()"
+                    id="confirmaPass" />
+            </div>
+            <div class="form-group col-12 col-sm-6">
+                <label>Años de experiencia</label>
+                <input class="form-control m-auto" value="{{data.anos_experiencia}}" id="experiencia" />
+            </div>
+            <div class="form-group col-12 col-sm-6">
+                <label>Especialidad</label>
+                <input class="form-control m-auto" value="{{data.especialidad}}" id="especialidad" />
+            </div>
+        </div>
+        <div class="mb-1">
+            <button class="btn btn-primary" onclick="actualizar({{data.id}})">Actualizar</button>
+        </div>
+        <div>
+            <button class="btn btn-danger" type="button"
+                onclick="eliminarUsuario({{data.id}}, '{{data.email}}')">Eliminar cuenta</button>
+        </div>
+    </form>
+</div>
+
+<script>
+    let validaPass = () => {
+        const password = document.getElementById('password')
+        const confirma = document.getElementById('confirmaPass')
+        if (confirma.value === password.value) {
+            confirma.setCustomValidity('');
+        } else {
+            confirma.setCustomValidity('Las passwords deben coincidir')
+        }
+    }
+
+    let actualizar = async (id) => {
+        let nombre = document.getElementById('nombre').value
+        let password = document.getElementById('password').value
+        let experiencia = document.getElementById('experiencia').value
+        let especialidad = document.getElementById('especialidad').value
+        let token = sessionStorage.getItem('Token')
+        let payload = {
+            id,
+            nombre,
+            password,
+            experiencia,
+            especialidad
+        }
+        try {
+            axios.put('/usuario', payload).then(() => window.location.href = '/')
+
+        }
+        catch ({ response }) {
+            const { data } = response
+            const { error } = data
+            alert(error)
+
+        }
+
+    }
+
+    let eliminarUsuario = (id, email) => {
+        try {
+            axios.delete(`/usuario/${id}`).then(() => {
+                sessionStorage.removeItem('Token')
+                alert("Usuario " + email + " eliminado")
+                window.location.href = '/'
+            })
+        }
+        catch ({ response }) {
+            const { data } = response
+            const { error } = data
+            alert(error)
+
+        }
+    }
+
+</script>

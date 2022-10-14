@@ -1,0 +1,55 @@
+<h1>Skate Park</h1>
+
+<div class="py-4">
+    <h2>Registro</h2>
+    <hr class="my-4" />
+
+    <form action="/usuario" method="post" enctype="multipart/form-data">
+        <div class="form-group row w-50 m-auto">
+            <div class="form-group col-12 col-sm-6">
+                <label>Email</label>
+                <input name="email" class="form-control m-auto" required />
+            </div>
+            <div class="form-group col-12 col-sm-6">
+                <label>Nombre</label>
+                <input name="nombre" class="form-control m-auto" required />
+            </div>
+            <div class="form-group col-12 col-sm-6">
+                <label>Password</label>
+                <input type="password" name="password" class="form-control m-auto" onchange="validaPass()" required />
+            </div>
+            <div class="form-group col-12 col-sm-6">
+                <label>Repita la password</label>
+                <input type="password" name="confirmaPassword" class="form-control m-auto" onchange="validaPass()"
+                    required />
+            </div>
+            <div class="form-group col-12 col-sm-6">
+                <label>Años de experiencia</label>
+                <input name="experiencia" class="form-control m-auto" required />
+            </div>
+            <div class="form-group col-12 col-sm-6">
+                <label>Especialidad</label>
+                <input name="especialidad" class="form-control m-auto" required />
+            </div>
+            <div class="form-group col-12 col-sm-12">
+                <label>Foto de perfil (max 5 MB)</label>
+                <input type="file" name="foto" required />
+            </div>
+        </div>
+        <button class="btn btn-info mb-3">Registrarme</button>
+        <p><a href="/login"> Iniciar sesión</a></p>
+    </form>
+</div>
+
+<script>
+
+    let validaPass = () => {
+        const password = document.querySelector('input[name=password]')
+        const confirma = document.querySelector('input[name=confirmaPassword]')
+        if (confirma.value === password.value) {
+            confirma.setCustomValidity('');
+        } else {
+            confirma.setCustomValidity('Las passwords deben coincidir')
+        }
+    }
+</script>
