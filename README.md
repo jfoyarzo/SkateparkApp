@@ -37,6 +37,9 @@ For this app to work you need PostgreSQL. To create the database use the psql sh
 And create a table using this command:<br>
 `CREATE TABLE skaters (id SERIAL, email VARCHAR(50) NOT NULL, nombre VARCHAR(25) NOT NULL, password VARCHAR(25) NOT NULL, anos_experiencia INT NOT NULL, especialidad VARCHAR(50) NOT NULL, foto VARCHAR(255) NOT NULL, estado BOOLEAN NOT NULL);`
 
+Also, you must provide valid credentials and port on file `consultas.js`
+https://github.com/jfoyarzo/SkateparkApp/blob/e8764099f38730d3fdc4956dfc31cfccac3d255e/consultas.js#L3-L9
+
 ### Install
 
 To install dependencies use `npm install`
