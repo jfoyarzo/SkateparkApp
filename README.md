@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/DesafioLATAM-important)
 
-# SkatePark App
+# Skatepark App
 
 An app that enables users to sign up for a fictional Skate event. The users and their info is displayed on the homepage of the front end. It has an admin view where you can authorize the registration of users. The backend is an API REST server made with Node.js and the Express framework. Express-Handlebars is used to render the pages dynamically and the data is persisted using a PostgreSQL database. 
 
@@ -17,7 +17,7 @@ An app that enables users to sign up for a fictional Skate event. The users and 
 
 ## Live version
 
-https://skatepark-app.onrender.com/
+[Skatepark App](https://external.ink?to=/skatepark-app.onrender.com/)
 
 ## Getting Started
 
