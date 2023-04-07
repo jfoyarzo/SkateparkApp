@@ -17,7 +17,7 @@ An app that enables users to sign up for a fictional Skate event. The users and 
 
 ## Live version
 
-[Skatepark App](https://external.ink?to=/skatepark-app.onrender.com/)
+<a href="https://skatepark-app.onrender.com/" target="_blank">Skatepark App</a>
 
 ## Getting Started
 
