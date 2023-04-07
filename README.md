@@ -2,7 +2,7 @@
 
 # SkatePark App
 
-> An app that enables users to sign up in a fictional Skate event. The users and their info is displayed in the homepage of the frontend. It has an admin view where you can authorize the registration of users. The backend is an API REST server made with Node.js and the Express framework. Handlebars is used to render the pages dinamically and the data is persisted using a PostgreSQL database. 
+An app that enables users to sign up for a fictional Skate event. The users and their info is displayed on the homepage of the front end. It has an admin view where you can authorize the registration of users. The backend is an API REST server made with Node.js and the Express framework. Express-Handlebars is used to render the pages dynamically and the data is persisted using a PostgreSQL database. 
 
 
 ## Built With
@@ -31,14 +31,13 @@ To get a local copy up and running follow these simple example steps.
 
 `git clone git@github.com:jfoyarzo/SkateparkApp.git`
 
-For this app to work you need PostgreSQL. To create the database use the psql shell: <br>
+For this app to work you need PostgreSQL. To create the database using the psql shell: <br>
 `CREATE DATABASE skatepark;`
 
 And create a table using this command:<br>
 `CREATE TABLE skaters (id SERIAL, email VARCHAR(50) NOT NULL, nombre VARCHAR(25) NOT NULL, password VARCHAR(25) NOT NULL, anos_experiencia INT NOT NULL, especialidad VARCHAR(50) NOT NULL, foto VARCHAR(255) NOT NULL, estado BOOLEAN NOT NULL);`
 
-Also, you must provide valid credentials and port on file `consultas.js`
-https://github.com/jfoyarzo/SkateparkApp/blob/e8764099f38730d3fdc4956dfc31cfccac3d255e/consultas.js#L3-L9
+Also, you must provide valid credentials and port on file `consultas.js` or use the provided `.env.example` file.
 
 ### Install
 
@@ -52,7 +51,7 @@ To start the server use the following command: <br>
 This will serve the frontend on:<br>
 http://localhost:3000 <br>
 
-To acces the admin view: <br>
+To access the admin view: <br>
 http://localhost:3000/admin
 
 ## Authors

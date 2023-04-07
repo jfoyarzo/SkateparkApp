@@ -1,11 +1,10 @@
+require('dotenv').config()
 const { Pool } = require('pg')
 
+const connectionString = process.env.STRING;
+
 const pool = new Pool({
-    user: "postgres",
-    host: "localhost",
-    password: "pass",
-    database: "skatepark",
-    port: 5433,
+    connectionString,
 })
 
 const insertarUsuario = async (usuario) => {
