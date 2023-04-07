@@ -11,9 +11,13 @@ An app that enables users to sign up for a fictional Skate event. The users and 
 - Bootstrap
 - Node.js
 - ExpressJS
-- PostgreSQL
-- Handlebars
+- Express-Handlebars
 - JWT
+- PostgreSQL
+
+## Live version
+
+https://skatepark-app.onrender.com/
 
 ## Getting Started
 
