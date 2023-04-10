@@ -1,30 +1,87 @@
-![](https://img.shields.io/badge/DesafioLATAM-important)
+<a name="readme-top"></a>
 
-# Skatepark App
+<!-- TABLE OF CONTENTS -->
 
-An app that enables users to sign up for a fictional Skate event. The users and their info is displayed on the homepage of the front end. It has an admin view where you can authorize the registration of users. The backend is an API REST server made with Node.js and the Express framework. Express-Handlebars is used to render the pages dynamically and the data is persisted using a PostgreSQL database. 
+# 📗 Table of Contents
+
+- [📗 Table of Contents](#-table-of-contents)
+- [📖 Skatepark App ](#-skatepark-app-)
+  - [🛠 Built With ](#-built-with-)
+    - [Tech Stack ](#tech-stack-)
+    - [Key Features ](#key-features-)
+  - [🚀 Live Demo ](#-live-demo-)
+  - [💻 Getting Started ](#-getting-started-)
+    - [Prerequisites](#prerequisites)
+    - [Setup](#setup)
+    - [Install](#install)
+    - [Usage](#usage)
+  - [👥 Authors ](#-authors-)
+  - [🔭 Future Features ](#-future-features-)
+  - [🤝 Contributing ](#-contributing-)
+  - [⭐️ Show your support ](#️-show-your-support-)
+  - [📝 License ](#-license-)
+
+<!-- PROJECT DESCRIPTION -->
+
+# 📖 Skatepark App <a name="about-project"></a>
+
+**Skatepark App** is An app that enables users to sign up for a fictional Skate event. The users and their info is displayed on the homepage of the front end. It has an admin view where you can authorize the registration of users. The backend is an API REST server made with Node.js and the Express framework. Express-Handlebars is used to render the pages dynamically and the data is persisted using a PostgreSQL database. 
+
+## 🛠 Built With <a name="built-with"></a>
+
+### Tech Stack <a name="tech-stack"></a>
 
 
-## Built With
+<details>
+  <summary>Frontend</summary>
+  <ul>
+    <li><a href="https://github.com/express-handlebars/express-handlebars">Express-Handlebars</a></li>
+  </ul>
+</details>
 
-- JavaScript
-- Bootstrap
-- Node.js
-- ExpressJS
-- Express-Handlebars
-- JWT
-- PostgreSQL
+<details>
+  <summary>Backend</summary>
+  <ul>
+    <li><a href="https://nodejs.org/">Node.js</a></li>
+    <li><a href="https://expressjs.com/">Express.js</a></li>
+  </ul>
+</details>
 
-## Live version
+<details>
+  <summary>Database</summary>
+  <ul>
+    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
+  </ul>
+</details>
 
-<a href="https://skatepark-app.onrender.com/" target="_blank">Skatepark App</a>
+<!-- Features -->
 
-## Getting Started
+### Key Features <a name="key-features"></a>
 
 
-To get a local copy up and running follow these simple example steps.
+- **Signup** using your email, name, password and signature movement!
+- **Log in** to your account for more options. Uses JWT for authentication.
+- **Admin view** for confirming new users.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LIVE DEMO -->
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+- [Live Demo Link](https://skatepark-app.onrender.com/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- GETTING STARTED -->
+
+## 💻 Getting Started <a name="getting-started"></a>
+
+
+To get a local copy up and running, follow these steps.
 
 ### Prerequisites
+To run this project you need:
 
 - Node.js
 - ExpressJS
@@ -33,24 +90,28 @@ To get a local copy up and running follow these simple example steps.
 
 ### Setup
 
-`git clone git@github.com:jfoyarzo/SkateparkApp.git`
+Clone this repository to your desired folder:
+
+```git clone git@github.com:jfoyarzo/SkateparkApp.git```
 
 For this app to work you need PostgreSQL. To create the database using the psql shell: <br>
-`CREATE DATABASE skatepark;`
+```CREATE DATABASE skatepark;```
 
 And create a table using this command:<br>
-`CREATE TABLE skaters (id SERIAL, email VARCHAR(50) NOT NULL, nombre VARCHAR(25) NOT NULL, password VARCHAR(25) NOT NULL, anos_experiencia INT NOT NULL, especialidad VARCHAR(50) NOT NULL, foto VARCHAR(255) NOT NULL, estado BOOLEAN NOT NULL);`
+```CREATE TABLE skaters (id SERIAL, email VARCHAR(50) NOT NULL, nombre VARCHAR(25) NOT NULL, password VARCHAR(25) NOT NULL, anos_experiencia INT NOT NULL, especialidad VARCHAR(50) NOT NULL, foto VARCHAR(255) NOT NULL, estado BOOLEAN NOT NULL);```
 
 Also, you must provide valid credentials and port on file `consultas.js` or use the provided `.env.example` file.
 
 ### Install
 
-To install dependencies use `npm install`
+Install this project's dependencies with:
+
+```npm install```
 
 ### Usage
 
 To start the server use the following command: <br>
-`npm start`<br>
+```node index.js```
 
 This will serve the frontend on:<br>
 http://localhost:3000 <br>
@@ -58,23 +119,54 @@ http://localhost:3000 <br>
 To access the admin view: <br>
 http://localhost:3000/admin
 
-## Authors
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- AUTHORS -->
+
+## 👥 Authors <a name="authors"></a>
 
 👤 **Felipe Oyarzo**
 
 - GitHub: [@jfoyarzo](https://github.com/jfoyarzo)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/jorge-felipe-oyarzo-contreras-647118247/)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/jorge-felipe-oyarzo-contreras/)
 
-## 🤝 Contributing
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FUTURE FEATURES -->
+
+## 🔭 Future Features <a name="future-features"></a>
+
+- [ ] **Upgraded CSS styles**
+- [ ] **Better notifications**
+- [ ] **Admin feature**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTRIBUTING -->
+
+## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](https://github.com/jfoyarzo/SkateparkApp/issues).
 
-## Show your support
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-Give a ⭐️ if you like this project!
+<!-- SUPPORT -->
 
-## 📝 License
+## ⭐️ Show your support <a name="support"></a>
+
+
+If you like this project please give it a ⭐!
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+<!-- LICENSE -->
+
+## 📝 License <a name="license"></a>
 
 This project is [MIT](./LICENSE) licensed.
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
