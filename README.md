@@ -92,13 +92,19 @@ To run this project you need:
 
 Clone this repository to your desired folder:
 
-```git clone git@github.com:jfoyarzo/SkateparkApp.git```
+```
+git clone git@github.com:jfoyarzo/SkateparkApp.git
+```
 
 For this app to work you need PostgreSQL. To create the database using the psql shell: <br>
-```CREATE DATABASE skatepark;```
+```
+CREATE DATABASE skatepark;
+```
 
 And create a table using this command:<br>
-```CREATE TABLE skaters (id SERIAL, email VARCHAR(50) NOT NULL, nombre VARCHAR(25) NOT NULL, password VARCHAR(25) NOT NULL, anos_experiencia INT NOT NULL, especialidad VARCHAR(50) NOT NULL, foto VARCHAR(255) NOT NULL, estado BOOLEAN NOT NULL);```
+```
+CREATE TABLE skaters (id SERIAL, email VARCHAR(50) NOT NULL, nombre VARCHAR(25) NOT NULL, password VARCHAR(25) NOT NULL, anos_experiencia INT NOT NULL, especialidad VARCHAR(50) NOT NULL, foto VARCHAR(255) NOT NULL, estado BOOLEAN NOT NULL);
+```
 
 Also, you must provide valid credentials and port on file `consultas.js` or use the provided `.env.example` file.
 
@@ -106,12 +112,16 @@ Also, you must provide valid credentials and port on file `consultas.js` or use 
 
 Install this project's dependencies with:
 
-```npm install```
+```
+npm install
+```
 
 ### Usage
 
 To start the server use the following command: <br>
-```node index.js```
+```
+node index.js
+```
 
 This will serve the frontend on:<br>
 http://localhost:3000 <br>
