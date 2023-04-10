@@ -25,7 +25,7 @@
 
 # 📖 Skatepark App <a name="about-project"></a>
 
-**Skatepark App** is An app that enables users to sign up for a fictional Skate event. The users and their info is displayed on the homepage of the front end. It has an admin view where you can authorize the registration of users. The backend is an API REST server made with Node.js and the Express framework. Express-Handlebars is used to render the pages dynamically and the data is persisted using a PostgreSQL database. 
+**Skatepark App** is a full-stack app that enables users to sign up for a fictional Skate event. The users and their info is displayed on the homepage of the front end. It has an admin view where you can authorize the registration of users. The backend is an API REST server made with Node.js and the Express framework. Express-Handlebars is used to render the pages dynamically and the data is persisted using a PostgreSQL database. 
 
 ## 🛠 Built With <a name="built-with"></a>
 
