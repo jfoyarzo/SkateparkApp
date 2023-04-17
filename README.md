@@ -1,6 +1,6 @@
 <a name="readme-top"></a>
 <div align="center">
-<img src="https://user-images.githubusercontent.com/101157253/232580630-6340b658-7e89-4f68-bbdc-1a6b7603eb45.png" style="height: 600px; margin: 0 auto 0 auto;"/>
+<img src="https://user-images.githubusercontent.com/101157253/232580630-6340b658-7e89-4f68-bbdc-1a6b7603eb45.png" style="height: 600px; width: "auto;"/>
 </div>
 
 
